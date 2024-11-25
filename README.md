@@ -1,2 +1,7 @@
-# Outpost-Zero
-Last stand for survival on the first colonized planet.
+Game Name:
+  Outpost-Zero
+Group Members:
+  Maksym Yelisyeyev
+  Azza Laz
+  Joseph Vue
+  
