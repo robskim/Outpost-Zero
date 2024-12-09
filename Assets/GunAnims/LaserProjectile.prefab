@@ -121,6 +121,8 @@ MonoBehaviour:
   speed: 20
   lifetime: 2
   maxDistance: 50
+  hitEffectPrefab: {fileID: 5238538877814813142, guid: 47096eff328e11a418ace7db2d72aa97,
+    type: 3}
 --- !u!136 &2741165275640245871
 CapsuleCollider:
   m_ObjectHideFlags: 0
