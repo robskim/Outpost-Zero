@@ -12,6 +12,9 @@ public class GunController : MonoBehaviour
     public Transform muzzle; // Muzzle position
     public ParticleSystem smokeParticles; // Smoke particle system
     public AudioSource HissSound; // Overheating sound
+    public AudioSource ShootSound; // Shooting sound
+    public AudioSource WalkSound; // Walking sound
+    public AudioSource RunSound; // Running sound
 
     public float fireRate = 0.1f; // Time between shots
     public float heatPerShot = 5f; // Heat added per shot
@@ -189,5 +192,20 @@ public class GunController : MonoBehaviour
     public void PlayHiss()
     {
         HissSound.Play();
+    }
+
+    public void PlayShoot()
+    {
+        ShootSound.Play();
+    }
+
+    public void PlayWalk()
+    {
+        WalkSound.Play();
+    }
+
+    public void PlayRun()
+    {
+        RunSound.Play();
     }
 }
