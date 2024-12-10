@@ -11,11 +11,12 @@ public class GunController : MonoBehaviour
     public GameObject laserPrefab; // Laser projectile prefab
     public Transform muzzle; // Muzzle position
     public ParticleSystem smokeParticles; // Smoke particle system
+    public AudioSource HissSound; // Overheating sound
 
     public float fireRate = 0.1f; // Time between shots
     public float heatPerShot = 5f; // Heat added per shot
     public float heatDecayRate = 2.5f; // Heat decrease per second
-    public float maxHeat = 250f; // Maximum heat level before overheating
+    public float maxHeat = 200f; // Maximum heat level before overheating
     private float currentHeat = 0f; // Current heat level
     private float nextFireTime = 0f;
     private bool overheated = false;
@@ -27,6 +28,7 @@ public class GunController : MonoBehaviour
         {
             smokeParticles.Stop(); // Ensure the particle system is off at the start
         }
+
     }
 
     void Update()
@@ -182,5 +184,10 @@ public class GunController : MonoBehaviour
             smokeParticles.Stop();
             Debug.Log("Smoke Deactivated");
         }
+    }
+
+    public void PlayHiss()
+    {
+        HissSound.Play();
     }
 }
