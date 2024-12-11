@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
                 transform.position += direction * speed * Time.deltaTime;
             }
             // Check if close enough to the target to move to the next waypoint
-            if (Vector3.Distance(transform.position, target.position) < 0.1f)
+            if (Vector3.Distance(transform.position, target.position) < 0.5f)
                 pathIndex++;
         }
         else
